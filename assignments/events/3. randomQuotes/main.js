@@ -1,11 +1,22 @@
 var quotes;
 
-// Write your code here
+let generator = document.querySelector(".generator");
+
+
+function random(element) {
+    for (i = 0, i < quotes.length, i++) {
+        element = Number(Math.random(quotes));
+        return element
+    }
+}
+
+generator.addEventListener("click", random) {
+    generator.innerText = toString(random.value);
+}
 
 
 
-quotes = [
-    {
+quotes = [{
         "quoteAuthor": "Thomas Edison",
         "quoteText": "Genius is one percent inspiration and ninety-nine percent perspiration."
     },

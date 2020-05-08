@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse-Move</title>
+</head>
+
+<body>
+    <h1>Mouse Move Cursor</h1>
+    <p id="screenx">0</p>
+    <p id="screeny">0</p>
+    <p id="clientx">0</p>
+    <p id="clienty">0</p>
+
+
+
+
+    <script>
+        let x = document.getElementById("screenx");
+        let y = document.getElementById("screeny");
+        let cx = document.getElementById("clientx");
+        let cy = document.getElementById("clienty");
+
+        let bod = document.querySelector("body");
+
+        bod.addEventListener("mousemove", function(e) {
+            // let valueX = x.screenx.value
+            x.innerText = e.screenX;
+            y.innerText = e.screenX
+            cx.innerText = e.clientX;
+            cy.innerText = e.clientY;
+            console.dir(e);
+
+        });
+    </script>
+</body>
+
+</html>

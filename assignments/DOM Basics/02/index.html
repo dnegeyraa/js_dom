@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Accessing Elements in the DOM</title>
 
     <style>
-      html {
-        font-family: sans-serif;
-        color: #333;
-      }
-      body {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-      div,
-      article {
-        padding: 10px;
-        margin: 5px;
-        border: 1px solid #dedede;
-      }
+        html {
+            font-family: sans-serif;
+            color: #333;
+        }
+        
+        body {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        div,
+        article {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #dedede;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1>Accessing Elements in the DOM</h1>
 
     <h2>ID (#demo)</h2>
@@ -46,7 +49,47 @@
     <div class="demo-query-all">Access me by query all (1)</div>
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
-      // your code goes here
+        // your code goes here
+
+
+        //selecting by id
+        let demo = document.getElementById("#demo");
+
+        // applying border
+        demo.style.border = "1px solid purple";
+
+
+        //selecting by class name
+        let name = document.getElementsByClassName("demo");
+
+
+        //applying borders
+        name.style.border = "1px solid orange"
+
+        //selecting by tag names
+
+        let tag = document.getElementsByTagName("article");
+
+        // applying borders
+        tag.style.border = "1px solid blue";
+
+
+        //selecting by querySelector
+
+        let queryId = document.querySelector("#demo-query");
+
+        //applying boredr
+
+        queryId.style.border = "1px solid gray";
+
+
+        // selecting by querySelectorAll
+
+        let queryAll = document.querySelectorAll("demo-query-all");
+
+        // applting borders
+        queryAll.style.border = "1px solid green"
     </script>
-  </body>
+</body>
+
 </html>
